@@ -687,9 +687,9 @@ class HSSelect extends HSBasePlugin<ISelectOptions> implements ISelect {
 		let hasItems = false;
 
 		options.forEach((el) => {
-			const optionVal = el.getAttribute('data-title-value').toLowerCase();
+			const optionVal = el.getAttribute('data-title-value').toLocaleLowerCase();
 
-			if (!optionVal.includes(val.toLowerCase())) el.classList.add('hidden');
+			if (!optionVal.includes(val.toLocaleLowerCase())) el.classList.add('hidden');
 			else {
 				el.classList.remove('hidden');
 				hasItems = true;
